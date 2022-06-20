@@ -13,17 +13,24 @@ uploaded_file_who = "asd.csv"
 all = pd.read_csv(uploaded_file_one, sep='|')
 task = pd.read_csv(uploaded_file_who, sep='|')
 
-col_multi, col_em = st.columns([1, 3])
 
-selected_sn = col_multi.selectbox(
-    "Выберите промокод",
-    options=all['state'].unique().tolist(),
-    index=0,
-)
+st.write(all.head(5))
+st.write(task.head(5))
 
 
+# option = st.selectbox(
+#      'How would you like to be contacted?',
+#      ('Email', 'Home phone', 'Mobile phone'))
 
-df_ref_code = all[all['state']== selected_sn].duration.value_counts().to_frame()
-st.dataframe(df_ref_code)
+# st.write('You selected:', option)
+
+
+
+
+# %%
+
+
+# %%
+
 
 
