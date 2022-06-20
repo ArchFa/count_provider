@@ -13,7 +13,7 @@ uploaded_file_who = "asd.csv"
 all = pd.read_csv(uploaded_file_one, sep='|')
 task = pd.read_csv(uploaded_file_who, sep='|')
 
-option = st.selectbox.selectbox(
+option = st.selectbox(
     "Выберите промокод",
     options=all['state'].unique().tolist(),
     index=0,
