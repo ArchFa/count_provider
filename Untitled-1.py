@@ -25,7 +25,7 @@ selected_sn = col_multi.selectbox(
     index=0,
 )
 
-st.write(all.query('state == @options'))
+st.write(all.query('state == @selected_sn'))
 
 
 
