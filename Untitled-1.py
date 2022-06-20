@@ -14,17 +14,18 @@ all = pd.read_csv(uploaded_file_one, sep='|')
 task = pd.read_csv(uploaded_file_who, sep='|')
 
 
+st.write(all.head(5))
+st.write(task.head(5))
+
+
 option = st.selectbox(
-    options=all['state'].unique().tolist(),
+    all['state'].unique().tolist(),
     index=0,
 )
 
-st.write(all.query('state == @option'))
+st.write('You selected:', option)
 
 
-
-
-# %%
 
 
 # %%
