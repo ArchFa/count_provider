@@ -10,8 +10,8 @@ uploaded_file_one = "main.csv"
 uploaded_file_who = "asd.csv"
 
 
-all = pd.read_csv(uploaded_file_one, sep='|')
-task = pd.read_csv(uploaded_file_who, sep='|')
+all = pd.read_csv(uploaded_file_one, sep=',')
+task = pd.read_csv(uploaded_file_who, sep=',')
 
 
 st.write(all.head(5))
