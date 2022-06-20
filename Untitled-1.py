@@ -25,10 +25,11 @@ selected_sn = col_multi.selectbox(
     index=0,
 )
 
-st.write(all.query('state == @selected_sn'))
+st.write(all.query('state == @selected_sn'), width=300)
 
 
 st.write("Суммарное еобходимое число провайдеров по штатам")
+st.write(task, width=200)
 
 # %%
 
