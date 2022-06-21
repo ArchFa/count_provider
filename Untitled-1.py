@@ -22,7 +22,7 @@ st.subheader("Количество необходимых провайдеров
 col_multi, col_em = st.columns([2, 3])
 selected_sn = col_multi.selectbox(
     "Выберите штат",
-    options_=all['state'].unique().tolist(),
+    options=all['state'].unique().tolist(),
     index=0,
 )
 
