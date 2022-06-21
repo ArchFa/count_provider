@@ -27,7 +27,7 @@ selected_sn = col_multi.selectbox(
 st.write(all.query('state == @selected_sn'), width=300)
 
 
-write("###Суммарное еобходимое число провайдеров по штатам")
+st.markdown("###Суммарное еобходимое число провайдеров по штатам")
 st.write(task, width=200)
 
 # %%
