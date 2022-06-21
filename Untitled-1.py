@@ -51,7 +51,7 @@ col_em.write("")
 col_em.write(
     f"{selected_sn} содержит {zero_count.query('state == @selected_sn').count()[0]} категорий без провайдеров и исполнителей"
 )
-st.write(zero_count.query('state == @selected_snn'), width=300)
+st.write(zero_count.query('state == @selected_sn'), width=300)
 
 
 # %%
