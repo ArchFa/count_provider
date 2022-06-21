@@ -17,7 +17,7 @@ task = pd.read_csv(uploaded_file_who, sep=',')
 zero_count = pd.read_csv(uploaded_file_third, sep=',')
 
 
-all = all[['state','category_id' , 'offers_may'	'offers_no_responds_may', 
+all = all[['state','category_id' , 'offers_may', 'offers_no_responds_may', 
 'count_active_may', 'count_active_may_with_responds', 'offers_responds_may']]
 
 all.columns = ['Штат', 'id категории', 'Количество задач', 
