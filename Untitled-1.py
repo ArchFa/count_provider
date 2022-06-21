@@ -20,13 +20,13 @@ st.subheader("Количество необходимых провайдеров
 
 
 col_multi, col_em = st.columns([2, 3])
-selected_sn_ = col_multi.selectbox(
+selected_sn = col_multi.selectbox(
     "Выберите штат",
     options_=all['state'].unique().tolist(),
     index=0,
 )
 
-st.write(all.query('state == @selected_sn_'), width=300)
+st.write(all.query('state == @selected_sn'), width=300)
 
 
 st.write("""##### Суммарное необходимое количество провайдеров по штатам""")
