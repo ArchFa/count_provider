@@ -49,7 +49,7 @@ selected_sn = col_multi.selectbox(
 col_em.write("")
 col_em.write("")
 col_em.write(
-    f"{selected_sn} содержит {df.query('state == @selected_sn').count()[0]} категорий без провайдеров и исполнителей"
+    f"{selected_sn} содержит {zero_count.query('state == @selected_sn').count()[0]} категорий без провайдеров и исполнителей"
 )
 
 
