@@ -17,12 +17,12 @@ task = pd.read_csv(uploaded_file_who, sep=',')
 zero_count = pd.read_csv(uploaded_file_third, sep=',')
 
 
-all = all[['state','category_id' , 'offers_may', 'offers_no_responds_may', 
-'count_active_may', 'count_active_may_with_responds', 'offers_responds_may']]
+# all = all[['state','category_id' , 'offers_may', 'offers_no_responds_may', 
+# 'count_active_may', 'count_active_may_with_responds', 'offers_responds_may']]
 
-all.columns = ['Штат', 'id категории', 'Количество задач', 
-                'Количество задач без отклика', 'Количество активных провайдеров',
-                'Количество активных провайдеров с откликом', 'Количество задач с откликом']
+# all.columns = ['Штат', 'id категории', 'Количество задач', 
+#                 'Количество задач без отклика', 'Количество активных провайдеров',
+#                 'Количество активных провайдеров с откликом', 'Количество задач с откликом']
 
 
 st.title("Аналитика задач за май 2022")
@@ -33,11 +33,11 @@ st.subheader("Количество необходимых провайдеров
 col_multi, col_em = st.columns([2, 3])
 selected_sn = col_multi.selectbox(
     "Выберите штат",
-    options=all['Штат'].unique().tolist(),
+    options=all['state'].unique().tolist(),
     index=0,
 )
 
-st.write(all.query('Штат == @selected_sn'), width=300)
+st.write(all.query('state == @selected_sn'), width=300)
 
 
 st.write("""##### Суммарное необходимое количество провайдеров по штатам""")
