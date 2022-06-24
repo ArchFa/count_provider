@@ -10,11 +10,14 @@ st.set_page_config(layout="wide")
 uploaded_file_one = "main.csv"
 uploaded_file_who = "asd.csv"
 uploaded_file_third = "df_count_zero.csv"
+uploaded_file_five = "df5_prov.csv"
+
 
 
 all = pd.read_csv(uploaded_file_one, sep=',')
 task = pd.read_csv(uploaded_file_who, sep=',')
 zero_count = pd.read_csv(uploaded_file_third, sep=',')
+need_task = pd.read_csv('uploaded_file_five', sep=',')
 
 
 all = all[['state','category_id' , 'offers_may', 'offers_no_responds_may', 
@@ -74,6 +77,22 @@ st.write(zero_count.query('Штат == @selected_sn'), width=300)
 ####################
 
 
+
+st.header("Штаты с маленьким количеством задач")
+
+col_multi, col_em = st.columns([2, 3])
+selected_sn = col_multi.selectbox(
+    "Выберите штат",
+    options=need_task['Штат'].unique().tolist(),
+    index=0,
+)
+
+col_em.write("")
+col_em.write("")
+col_em.write(
+    f"В штат {selected_sn} необходимо привлечь {zero_count.query('Штат == @selected_sn').count()[0]} закзачиков"
+)
+st.write(need_task.query('Штат == @selected_sn'), width=300)
 
 # %%
 
