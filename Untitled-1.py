@@ -90,7 +90,7 @@ selected_sn = col_multi.selectbox(
 col_em.write("")
 col_em.write("")
 col_em.write(
-    f"В штат {selected_sn} необходимо привлечь {zero_count.query('Штат == @selected_sn').sum()[7]} закзачиков"
+    f"В штат {selected_sn} необходимо привлечь {zero_count.query('Штат == @selected_sn').sum()[8]} закзачиков"
 )
 st.write(need_task.query('Штат == @selected_sn'), width=300)
 
