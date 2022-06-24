@@ -96,6 +96,8 @@ col_em.write(
 )
 st.write(need_task.query('Штат == @selected_sn'), width=300)
 
+
+st.write("""##### Суммарное необходимое количество заказчиков по штатам""")
 st.write(need_task_state, width=200)
 
 # %%
