@@ -60,7 +60,7 @@ st.write(task, width=200)
 
 ####################
 
-st.subheader("Штаты с 0 задач и провайдеров")
+st.header("Штаты с 0 задач и провайдеров")
 
 col_multi, col_em = st.columns([2, 3])
 selected_sn = col_multi.selectbox(
