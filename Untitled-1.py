@@ -11,6 +11,7 @@ uploaded_file_one = "main.csv"
 uploaded_file_who = "asd.csv"
 uploaded_file_third = "df_count_zero.csv"
 uploaded_file_five = "df5_prov.csv"
+uploaded_file_six = "df6_prov_state.csv"
 
 
 
@@ -18,6 +19,7 @@ all = pd.read_csv(uploaded_file_one, sep=',')
 task = pd.read_csv(uploaded_file_who, sep=',')
 zero_count = pd.read_csv(uploaded_file_third, sep=',')
 need_task = pd.read_csv(uploaded_file_five, sep=',')
+need_task_state = pd.read_csv(uploaded_file_five, sep=',')
 
 
 all = all[['state','category_id' , 'offers_may', 'offers_no_responds_may', 
@@ -93,6 +95,9 @@ col_em.write(
     f"{selected_sn} содержит {need_task.query('Штат == @selected_sn').sum()[8]} категорий без провайдеров и исполнителей"
 )
 st.write(need_task.query('Штат == @selected_sn'), width=300)
+
+st.write(uploaded_file_six, width=200)
+
 
 # %%
 
