@@ -96,7 +96,7 @@ col_em.write(
 )
 st.write(need_task.query('Штат == @selected_sn'), width=300)
 
-st.write(uploaded_file_six, width=200)
+st.write(need_task_state, width=200)
 
 # %%
 
